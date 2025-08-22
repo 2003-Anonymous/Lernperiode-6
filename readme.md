@@ -4,9 +4,7 @@
 
 ## Grob-Planung
 
-1. Für welches der drei Projekte haben Sie sich entschieden?
-2. Wie passen Sie dieses Projekt gem. Ihrer Vorlieben an?
-3. Erklären Sie Ihre Projekt-Idee in einem Satz, als müssen Sie einen Investor davon überzeugen.
+Ich will ein Kampfspiel machen, in dem der Player gegen einen Gegner kämpft(Autobattle). Der Player hat verschiedene Klassen wie z.B. Archer oder Berserker.
 
 ## 22.8
 
@@ -14,18 +12,18 @@
 - [ ] Arbeitspaket 2: Schreiben Sie eine Liste, welche Klassen und Objekte es braucht, und wie diese miteinander interagieren. Das Format ist Ihnen freigestellt, aber Sie müssen es auch bereits heute auf github laden. (Dieses AP dauert ausnahmsweise nur 15')
 - [ ] Arbeitspaket 3 (Falls Sie den *maker space* besuchen, dann dürfen Sie diesen Punkt löschen. Ansonsten können Sie hier mit dem Coden beginnen, nachdem Sie sich ganz klar überlegt haben, was Ihr erster Schritt ist und den hier als AP festgehalten haben.)
 
-✍️ Heute habe ich... (50-100 Wörter)
+Heute habe ich auf Papier einen groben Plan meiner Klassen aufgezeichnet. Danach habe ich schon einmal eine Ordnerstruktur in meinem Projekt erstellt, da ich vorhabe, dass Projekt noch stark zu erweitern und es soll übersichtlich bleiben.
 
-☝️ Vergessen Sie nicht, einen ersten Code und Skizze auf github hochzuladen!
 
 ## 29.8
 
-- [ ] Arbeitspaket 1
-- [ ] Arbeitspaket 2
-- [ ] Arbeitspaket 3 
+- [ ] Die Klasse Player fertig erstellen.
+- [ ] Die Klassen Archer und Berserker von Player erben lassen und noch Werte ergänzen.
+- [ ] Weitere Klassen für den Player und auch noch Waffen auf Papier aufzeichnen.
 
 📵 Eines dieser Arbeitspakete ist offline.
 
 ✍️ Heute habe ich... (50-100 Wörter)
 
 ☝️ Vergessen Sie nicht, Ihren Code auf github hochzuladen
+
