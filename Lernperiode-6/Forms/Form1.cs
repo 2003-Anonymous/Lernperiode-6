@@ -6,5 +6,15 @@ namespace Lernperiode_6
         {
             InitializeComponent();
         }
+
+        private void play_btn_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.Show();
+
+            this.Hide();
+
+            
+        }
     }
 }
