@@ -18,12 +18,16 @@ Heute habe ich auf Papier einen groben Plan meiner Klassen aufgezeichnet. Danach
 ## 29.8
 
 - [ ] Die Klasse Player fertig erstellen.
-- [ ] Die Klassen Archer und Berserker von Player erben lassen und noch Werte ergänzen.
-- [ ] Weitere Klassen für den Player und auch noch Waffen auf Papier aufzeichnen.
+- [x] Grobes Design zeichnen, damit ich weiss, was in welches Forms kommt
+- [x] Einen Player auf dem Form2 erstellen können.
 
-📵 Eines dieser Arbeitspakete ist offline.
+Heute habe ich die Klasse Archer noch erweitert. Ich habe eine Klasse StatsControl erstellt, mit der die Stats einer erstellten Instanz z.B. der Klasse Archer angezeigt werden. Rechts neben dem Bild der Instanz steht der Name z.B. Damage und daneben ist eine Progressbar, welche den Wert in Relation zum höchsten Wert darstellt. Am Schluss habe ich noch eine Klasse Enemy erstellt und der schon ein paar Basisatribute gegeben, damit ich nächstes mal das Kampfsystem erstellen kann.
 
-✍️ Heute habe ich... (50-100 Wörter)
+## 05.09
 
-☝️ Vergessen Sie nicht, Ihren Code auf github hochzuladen
+- [ ] Das Kampfsystem aufzeeichnen. Also wie der zugefügte Schaden von den Leben des Gegners abgezogen werden.
+- [ ] Eine Attack-Methode erstellen
+- [ ] Eine GetDamage-Methode erstelllen
+- [ ] Testen, ob diese Methoden richtig funktionieren und optimal sind
+
 
