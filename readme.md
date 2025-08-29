@@ -22,6 +22,7 @@ Heute habe ich auf Papier einen groben Plan meiner Klassen aufgezeichnet. Danach
 - [x] Einen Player auf dem Form2 erstellen können.
 
 Heute habe ich eine Skitze des groben Designs erstellt, damit ich besser weiss, was in welches Forms kommt und wie die Klassen miteinander interagieren müssn. Dann habe ich die Klasse Archer noch erweitert. Ich habe eine Klasse StatsControl erstellt, mit der die Stats einer erstellten Instanz z.B. der Klasse Archer angezeigt werden. Rechts neben dem Bild der Instanz steht der Name z.B. Damage und daneben ist eine Progressbar, welche den Wert in Relation zum höchsten Wert darstellt. Am Schluss habe ich noch eine Klasse Enemy erstellt und der schon ein paar Basisatribute gegeben, damit ich nächstes mal das Kampfsystem erstellen kann.
+<img width="2661" height="3547" alt="image" src="https://github.com/user-attachments/assets/a485026b-5761-4d1e-8d1c-3f820c1b0085" />
 
 ## 05.09
 
@@ -29,6 +30,7 @@ Heute habe ich eine Skitze des groben Designs erstellt, damit ich besser weiss, 
 - [ ] Eine Attack-Methode erstellen
 - [ ] Eine GetDamage-Methode erstelllen
 - [ ] Testen, ob diese Methoden richtig funktionieren und optimal sind
+
 
 
 
