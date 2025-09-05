@@ -26,10 +26,16 @@ Heute habe ich eine Skitze des groben Designs erstellt, damit ich besser weiss, 
 
 ## 05.09
 
-- [ ] Das Kampfsystem aufzeeichnen. Also wie der zugefügte Schaden von den Leben des Gegners abgezogen werden.
-- [ ] Eine Attack-Methode erstellen
-- [ ] Eine GetDamage-Methode erstelllen
+- [x] Das Kampfsystem aufzeichnen. Also wie der zugefügte Schaden von den Leben des Gegners abgezogen werden.
+- [x] Eine Attack-Methode erstellen
+- [x] Eine GetDamage-Methode erstelllen
 - [ ] Testen, ob diese Methoden richtig funktionieren und optimal sind
+
+Heute habe ich das Kampsystem programmiert und zwar mit einer Fight-Methode im Forms2 gemacht. Diese ruft jeweils die Attack-Methoden des Players und des Enemys auf. In diesen Methoden wird ein Timer erstellt, der basierend auf dem Attackspeed eine Methode aufruft, welche dem Gegner Schaden durch die getDamage-Methode zugefügt wird. Dann habe ich noch eine abstrakte Klasse Typ erstellt, welche der Grundbauplan für die verschiedenen Klassen des Players darstellt. So ist es übersichtlicher und ich muss nicht bei jedem neuen Typ alle Werte deklarieren. Ich habe durch einen Getter und einen Setter noch hinzugefügt, dass die Leben nicht unter null oder über das Maximum gehen können. Das kämpfen funktionert aber noch nicht. Die Lebensbalken bleiben unverändert, wenn man den Kamp startet. Dieses Problem konnte ich nicht mehr lösen.
+
+
+![thumbnail_pro-spWKMOOW](https://github.com/user-attachments/assets/5eef19be-6e84-4948-aa92-ef5fe806beca)
+
 
 
 
