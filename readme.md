@@ -36,6 +36,12 @@ Heute habe ich das Kampsystem programmiert und zwar mit einer Fight-Methode im F
 
 ![thumbnail_pro-spWKMOOW](https://github.com/user-attachments/assets/5eef19be-6e84-4948-aa92-ef5fe806beca)
 
+## 12.09
+
+- [ ] Herausfinden, warum das Kampfsystem nicht funktioniert.
+- [ ] Einen weiteren Typen für den Player erstellen.
+- [ ] Hinzufügen, dass wenn man einen Player erstellt, aussuchen kann, welchen Typen man haben möchte.
+- [ ] Waffen programmieren, welche man auch beim erstellen auswählen kann.
 
 
 
