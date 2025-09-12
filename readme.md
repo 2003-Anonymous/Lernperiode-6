@@ -38,11 +38,19 @@ Heute habe ich das Kampsystem programmiert und zwar mit einer Fight-Methode im F
 
 ## 12.09
 
-- [ ] Herausfinden, warum das Kampfsystem nicht funktioniert.
+- [x] Herausfinden, warum das Kampfsystem nicht funktioniert.
 - [ ] Einen weiteren Typen für den Player erstellen.
-- [ ] Hinzufügen, dass wenn man einen Player erstellt, aussuchen kann, welchen Typen man haben möchte.
+- [x] Hinzufügen, dass wenn man einen Player erstellt, aussuchen kann, welchen Typen man haben möchte.
 - [ ] Waffen programmieren, welche man auch beim erstellen auswählen kann.
 
+Heute habe ich das Kampsystem fertig gestellt. Es hat nicht funktioniert, weil ich neben den Leben in den Stats noch eine zweite Healthbar erstellt habe, von der Leben abgezogen wurden. Das konnte ich aber schnell beheben. Danach hatte ich ein weiteres Problem, und zwar hat der Gegner weiter angegriffen, obwohl er tot war. Um das zu lösen, habe ich mit einem If gecheckt, ob er noch lebt. Wenn nicht, wird der Attacktimer gestoppt. Als nächstes habe ich ein weiteres Forms erstellt, welches sich öffnet, wenn man den Createbutton clickt. Dort werden dann Buttons für jeden Playertypen  generiert, welche in einem String gespeichert sind. Dieser Typ wird im Tag des Buttons gespeichert und so wird ein Objekt des Types, welchen man anklickt, instanziert. Im Moment wird das Objekt aber noch diesem neuen Form hinzugefügt und nicht dem Form2. Um das zu lösen hat die Zeit nicht mehr gerreicht und für die Waffen auch nicht mehr. Ich habe länger als gedacht für das Kampfsystem gebraucht, konnte aber vorallem custom Getter und Setter gut üben. Den weiteren Typen habe ich weggelassen, weil das dann eher eine Ereweiterung ist für die Zukunft.
+
+
+## 19.09
+
+- [ ] Ändern, dass der erstellte Player dem Form2 hinzugefügt wird.
+- [ ] Code herausputzen (Variablennamen)
+- [ ] Programmieren, dass man die Attribute des Players auch auf dem TypeSelect-Form eingeben kann.
 
 
 
