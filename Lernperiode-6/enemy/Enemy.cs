@@ -11,29 +11,24 @@ namespace Lernperiode_6.enemy
     internal class Enemy : UserControl
     {
 
-        private int _health;
+        private double _health;
         private int _damage;
         private int _attackSpeed;
         private int _defense;
 
         private PictureBox _image;
-        public CustomProgressBar EnemyHealthBar;
         private System.Windows.Forms.Timer EnemyAttackTimer;
         private Typ typ;
 
-        public StatsControl StatsEnemy { get; private set; }
+        public StatsControlEnemy StatsEnemy { get; private set; }
 
-        public int Health
+        public double Health
         {
             get { return _health; }
             set
             {
-                if (value < 0)
-                    _health = 0;
-                else if (value > EnemyHealthBar.Maximum)
-                    _health = EnemyHealthBar.Maximum;
-                else
-                    _health = value;
+                _health = Math.Max(0, value);
+                StatsEnemy.EnemyHealthSet = (int)_health;
             }
         }
 
@@ -54,24 +49,13 @@ namespace Lernperiode_6.enemy
             _image.Location = new Point(0, 10);
             this.Controls.Add(_image);
 
-            EnemyHealthBar = new CustomProgressBar();
-            EnemyHealthBar.Size = new Size(35, 5);
-            EnemyHealthBar.Location = new Point(700, 200);
-            EnemyHealthBar.Maximum = health;
-            EnemyHealthBar.Value = health;
-            EnemyHealthBar.BackColor = Color.Black;
-            EnemyHealthBar.ForeColor = Color.Red;
-
-            this.Controls.Add(EnemyHealthBar);
-
-            StatsEnemy = new StatsControl(health, damage, attackSpeed, defense);
+            StatsEnemy = new StatsControlEnemy(health, damage, attackSpeed, defense);
         }
 
         public void TakeDamage(int damage)
         {
-            Health = Health - (damage * (_defense/100));
-                
-            EnemyHealthBar.Value = Health;
+            _health = _health - (damage * (1 - (_defense / 100.0)));
+            Health = Convert.ToInt32(_health);
         }
 
         public void Attack(Typ target)
@@ -86,9 +70,21 @@ namespace Lernperiode_6.enemy
 
         private void DealDamage(object sender, EventArgs e)
         {
+            if(this.Health <= 0)
+            {
+                EnemyAttackTimer.Stop();
+                this.Hide();
+                StatsEnemy.Hide();
+                return;
+            }
+
             if (typ != null && typ.Health > 0)
             {
                 typ.TakeDamage(_damage);
+            }
+            else
+            {
+                EnemyAttackTimer.Stop();
             }
         }
     }
@@ -130,6 +126,11 @@ namespace Lernperiode_6.enemy
         private CustomProgressBar _attackSpeed;
         private CustomProgressBar _defense;
 
+        public int EnemyHealthSet
+        {
+            get => _health.Value;
+            set => _health.Value = Math.Max(_health.Minimum, Math.Min(_health.Maximum, value));
+        }
 
         public StatsControlEnemy(int health, int damage, int attackSpeed, int defense)
         {

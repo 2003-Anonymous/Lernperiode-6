@@ -18,11 +18,12 @@ namespace Lernperiode_6
     {
         private Enemy enemy;
         private Archer archer;
+        private Form2 parent;
         public Form2()
         {
             InitializeComponent();
-
-            enemy = new Enemy(100, 40, 40, 15);
+            this.parent = this;
+            enemy = new Enemy(100, 40, 1, 15);
             Controls.Add(enemy);
 
             FlowLayoutPanel statsEnemy = new FlowLayoutPanel();
@@ -36,16 +37,10 @@ namespace Lernperiode_6
 
         public void create_btn_Click(object sender, EventArgs e)
         {
-            archer = new Archer(100, 80, 50, 20);
-            Controls.Add(archer);
+            Form typeSelect = new TypeSelect(this);
+            typeSelect.Show();
 
-            FlowLayoutPanel statsPanel = new FlowLayoutPanel();
-            statsPanel.FlowDirection = FlowDirection.TopDown;
-            statsPanel.Size = new Size(220, 400);
-            statsPanel.Location = new Point(archer.Left + 90, 100);
-            this.Controls.Add(statsPanel);
-
-            statsPanel.Controls.Add(archer.Stats);
+            
         }
 
         private void fight_btn_Click(object sender, EventArgs e)

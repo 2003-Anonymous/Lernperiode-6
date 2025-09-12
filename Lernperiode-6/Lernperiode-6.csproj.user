@@ -13,11 +13,17 @@
     <Compile Update="player\Archer.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="player\Berserker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="player\Player.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="player\Typ.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Forms\TypeSelect.cs">
+      <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
 </Project>

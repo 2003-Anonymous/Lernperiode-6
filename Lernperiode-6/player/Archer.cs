@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lernperiode_6.enemy;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,8 @@ namespace Lernperiode_6.player
 {
     internal class Archer : Typ   
     {
+        private Enemy enemy;
+
         public Archer(int health, int damage, int attackSpeed, int defense)
         : base(health, damage, attackSpeed, defense)
         {
@@ -24,5 +27,7 @@ namespace Lernperiode_6.player
 
             Stats = new StatsControl(health, damage, attackSpeed, defense);
         }
+
+
     }
 }
