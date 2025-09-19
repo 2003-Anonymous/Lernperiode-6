@@ -8,13 +8,14 @@ using System.Windows.Forms.VisualStyles;
 
 namespace Lernperiode_6.enemy
 {
-    internal class Enemy : UserControl
+    public class Enemy : UserControl
     {
 
         private double _health;
         private int _damage;
         private int _attackSpeed;
         private int _defense;
+
 
         private PictureBox _image;
         private System.Windows.Forms.Timer EnemyAttackTimer;
@@ -63,7 +64,7 @@ namespace Lernperiode_6.enemy
             typ = target;
 
             EnemyAttackTimer = new System.Windows.Forms.Timer();
-            EnemyAttackTimer.Interval = 1000 / _attackSpeed;
+            EnemyAttackTimer.Interval = 1000 * 25 / _attackSpeed;
             EnemyAttackTimer.Tick += DealDamage;
             EnemyAttackTimer.Start();
         }

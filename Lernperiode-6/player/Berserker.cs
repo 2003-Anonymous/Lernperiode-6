@@ -5,9 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Lernperiode_6.player
 {
-    internal class Berserker : Typ
+    public class Berserker : Typ
     {
         private Enemy enemy;
 
@@ -15,16 +16,17 @@ namespace Lernperiode_6.player
         : base(health, damage, attackSpeed, defense)
         {
             _image = new PictureBox();
-            _image.Image = Image.FromFile(@"C:\Users\joshu\source\repos\Lernperiode-6\Lernperiode-6\Images\Archer.JPEG");
+            _image.Image = Image.FromFile(@"C:\Users\joshu\source\repos\Lernperiode-6\Lernperiode-6\Images\Berserker.JPEG");
             _image.SizeMode = PictureBoxSizeMode.StretchImage;
             _image.Size = new Size(80, 80);
             _image.Location = new Point(0, 10);
             this.Controls.Add(_image);
 
             this.Size = new Size(100, 140);
-            this.Location = new Point(100, 100);
+            this.Location = new Point(250, 100);
 
-            Stats = new StatsControl(health, damage, attackSpeed, defense);
+            Stats = new StatsControl(statsArray);
+            EnterStats = new StatsEnter();
         }
     }
 }

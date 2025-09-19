@@ -7,7 +7,7 @@ using Lernperiode_6.enemy;
 
 namespace Lernperiode_6.player
 {
-    internal abstract class Typ : UserControl
+    public abstract class Typ : UserControl
     {
         protected double _health;
         protected int _damage;
@@ -17,7 +17,7 @@ namespace Lernperiode_6.player
         protected ProgressBar _healthBar;
         public System.Windows.Forms.Timer AttackTimer;
         private Enemy enemy;
-
+        public int[] statsArray;
         public static string[] types = { "Archer", "Berserker" };
 
         
@@ -33,6 +33,7 @@ namespace Lernperiode_6.player
       
 
         public StatsControl Stats { get; protected set; }
+        public StatsEnter EnterStats { get; protected set; }
 
         protected Typ(int health, int damage, int attackSpeed, int defense)
         {
@@ -53,7 +54,7 @@ namespace Lernperiode_6.player
             enemy = target;
 
             AttackTimer = new System.Windows.Forms.Timer();
-            AttackTimer.Interval = 1000 / _attackSpeed;
+            AttackTimer.Interval = 1000 * 25 / _attackSpeed;
             AttackTimer.Tick += DealDamage;
             AttackTimer.Start();
         }

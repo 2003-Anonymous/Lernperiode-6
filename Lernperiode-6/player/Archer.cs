@@ -5,10 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
+using Lernperiode_6.player;
 
 namespace Lernperiode_6.player
 {
-    internal class Archer : Typ   
+    public class Archer : Typ   
     {
         private Enemy enemy;
 
@@ -23,9 +24,22 @@ namespace Lernperiode_6.player
             this.Controls.Add(_image);
 
             this.Size = new Size(100, 140);
-            this.Location = new Point(100, 100);
+            this.Location = new Point(250, 100);
 
-            Stats = new StatsControl(health, damage, attackSpeed, defense);
+            this.BackColor = Color.Transparent;
+
+            statsArray = new int[4];
+
+            Stats = new StatsControl(statsArray);
+            EnterStats = new StatsEnter();
+
+            
+        }
+
+        public Archer()
+        : base(10, 10, 10, 10)
+        {
+
         }
 
 
