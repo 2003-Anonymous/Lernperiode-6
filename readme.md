@@ -48,9 +48,19 @@ Heute habe ich das Kampsystem fertig gestellt. Es hat nicht funktioniert, weil i
 
 ## 19.09
 
-- [ ] Ändern, dass der erstellte Player dem Form2 hinzugefügt wird.
-- [ ] Code herausputzen (Variablennamen)
+- [x] Ändern, dass der erstellte Player dem Form2 hinzugefügt wird.
+- [x] Code herausputzen (Variablennamen)
 - [ ] Programmieren, dass man die Attribute des Players auch auf dem TypeSelect-Form eingeben kann.
+
+Heute habe ich programmiert, dass der Player auf dem TypeSelect-Form und dem Form2 erstellt wird. Auf dem TypeSelect-Form kann man Werte in Textboxen eingeben, diese werden dann in einem Array gespeichert und wenn man Commmited, wird ein Objekt mit diesen Werten instanziert. Ich habe es aber noch nicht hinbekommen, dass die Werte dann dort hinkommen, wo das Objekt erstellt wird. Als nächstes habe ich noch den Attackspeed angepasst, dass er Player 1-mal por Sekunde angreifft, wenn der Attackspeed 25 ist.
+
+
+## 17.10
+
+- [ ] Noch programmieren, dass die Werte, die man eingibt, dann auch dem Objekt gegeben werden.
+- [ ] Noch einen Typ mehr erstellen.
+- [ ] Hinzufügen, dass wenn der erste Gegner stirbt, ein neuer erscheint.
+
 
 
 
