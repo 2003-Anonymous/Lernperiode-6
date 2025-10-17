@@ -55,11 +55,26 @@ Heute habe ich das Kampsystem fertig gestellt. Es hat nicht funktioniert, weil i
 Heute habe ich programmiert, dass der Player auf dem TypeSelect-Form und dem Form2 erstellt wird. Auf dem TypeSelect-Form kann man Werte in Textboxen eingeben, diese werden dann in einem Array gespeichert und wenn man Commmited, wird ein Objekt mit diesen Werten instanziert. Ich habe es aber noch nicht hinbekommen, dass die Werte dann dort hinkommen, wo das Objekt erstellt wird. Als nächstes habe ich noch den Attackspeed angepasst, dass er Player 1-mal por Sekunde angreifft, wenn der Attackspeed 25 ist.
 
 
-## 17.10
+## 17.10 Abschluss
 
-- [ ] Noch programmieren, dass die Werte, die man eingibt, dann auch dem Objekt gegeben werden.
-- [ ] Noch einen Typ mehr erstellen.
+- [x] Noch programmieren, dass die Werte, die man eingibt, dann auch dem Objekt gegeben werden.
+- [x] Lebenslimit, Schadenslimit etc. für die verschiedenen Typen hinzufügen.
 - [ ] Hinzufügen, dass wenn der erste Gegner stirbt, ein neuer erscheint.
+
+Heute habe ich programmiert, dass man, wenn man auf "Create" klickt und dann einen Typen auswählt, die gewünschten Stats eingeben kann. Als Placeholder wird im Textfeld angezeigt, was das Minimum und das Maximum für die Klasse ist. Wenn man auf "Confirm" klickt, wird überprüft, ob alle Werte unter dem Maximum liegen. Wird das Maximum überschritten, wird der Wert einfach auf das Maximum gesetzt. Der fertige Player wird dann auf dem Form2 erstellt. Zum Schluss wollte ich noch hinzufügen, dass wenn man den Gegner besiegt hat, dass ein neuer erstellt wird, der stärker ist. Das hat aber nicht ganz fünktioniert. Das Bild des Gegners ist zwar erschienen und konnte auch angreifen, aber seine Stats waren nicht zu sehen. Das konnte ich aber leider nicht mehr lösen.
+
+#Fertiges Projekt
+Ich habe einen Autobattler programmiert, wo der Spieler sich selbst einen Charakter erstellen kann. Er hat dabei die Auswahl zwischen den Klassen Archer und Berserker. Beide Klassen haben unterschiedliche Limitten bei den Stats. Der Berserker kann z.B. mehr Leben haben als der Archer, greift aber dafür langsamer an. Wenn man fertig mit dem erstellen ist, kann man auf "Fight" klicken und der Kampf beginnt. Der erstellte Charakter des Spielers und der Gegner greifen sich dann gegenseitig an, basierend auf ihrem Attackspeed.
+
+
+https://github.com/user-attachments/assets/a56f61a6-9fe9-423a-b54c-2ae905ccc787
+
+
+#Reflexion
+Mir hat dieses Projekt viel Spass gemacht und ich konnte Vererbung, Überladungen und Override gut üben und fühle mich jetzt viel sicherer. Ich habe auch neue Vererbungsverhaltensmodifikatoren wie abstract und virtual gelernt und praktisch angewendet. Was manchmal ein wenig kompliziert war, war der Zugriff auf verschiedene Klassen. Aber mit der Zeit hatte ich das eigentlich auch gut im Griff. Ich habe auch noch gelernt, wie ich mit FlowLayoutPanels und Progrressbars die Stats gut abbilden kann. Ich bin ziehmlich zufrieden mit meinem Projekt, obwohl es grafisch nicht sehr schön aussieht. Aber das ist mit WinForms nicht so einfach und wichtig ist ja, dass es funktioniert. Ich habe noch sehr viele Ideen um dieses Game zu erweitern, wie z.B. mit Waffen und weiteren Typen. Ich werde das Projekt in meiner Freizeit noch weiter programmieren und verbessern.
+
+
+
 
 
 
