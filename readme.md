@@ -63,15 +63,16 @@ Heute habe ich programmiert, dass der Player auf dem TypeSelect-Form und dem For
 
 Heute habe ich programmiert, dass man, wenn man auf "Create" klickt und dann einen Typen auswählt, die gewünschten Stats eingeben kann. Als Placeholder wird im Textfeld angezeigt, was das Minimum und das Maximum für die Klasse ist. Wenn man auf "Confirm" klickt, wird überprüft, ob alle Werte unter dem Maximum liegen. Wird das Maximum überschritten, wird der Wert einfach auf das Maximum gesetzt. Der fertige Player wird dann auf dem Form2 erstellt. Zum Schluss wollte ich noch hinzufügen, dass wenn man den Gegner besiegt hat, dass ein neuer erstellt wird, der stärker ist. Das hat aber nicht ganz fünktioniert. Das Bild des Gegners ist zwar erschienen und konnte auch angreifen, aber seine Stats waren nicht zu sehen. Das konnte ich aber leider nicht mehr lösen.
 
-#Fertiges Projekt
+# Fertiges Projekt
 Ich habe einen Autobattler programmiert, wo der Spieler sich selbst einen Charakter erstellen kann. Er hat dabei die Auswahl zwischen den Klassen Archer und Berserker. Beide Klassen haben unterschiedliche Limitten bei den Stats. Der Berserker kann z.B. mehr Leben haben als der Archer, greift aber dafür langsamer an. Wenn man fertig mit dem erstellen ist, kann man auf "Fight" klicken und der Kampf beginnt. Der erstellte Charakter des Spielers und der Gegner greifen sich dann gegenseitig an, basierend auf ihrem Attackspeed.
 
 
 https://github.com/user-attachments/assets/a56f61a6-9fe9-423a-b54c-2ae905ccc787
 
 
-#Reflexion
+# Reflexion
 Mir hat dieses Projekt viel Spass gemacht und ich konnte Vererbung, Überladungen und Override gut üben und fühle mich jetzt viel sicherer. Ich habe auch neue Vererbungsverhaltensmodifikatoren wie abstract und virtual gelernt und praktisch angewendet. Was manchmal ein wenig kompliziert war, war der Zugriff auf verschiedene Klassen. Aber mit der Zeit hatte ich das eigentlich auch gut im Griff. Ich habe auch noch gelernt, wie ich mit FlowLayoutPanels und Progrressbars die Stats gut abbilden kann. Ich bin ziehmlich zufrieden mit meinem Projekt, obwohl es grafisch nicht sehr schön aussieht. Aber das ist mit WinForms nicht so einfach und wichtig ist ja, dass es funktioniert. Ich habe noch sehr viele Ideen um dieses Game zu erweitern, wie z.B. mit Waffen und weiteren Typen. Ich werde das Projekt in meiner Freizeit noch weiter programmieren und verbessern.
+
 
 
 
