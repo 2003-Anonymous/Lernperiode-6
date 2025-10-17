@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Lernperiode_6.enemy;
+using Lernperiode_6.player;
 
 namespace Lernperiode_6.player
 {
@@ -18,9 +19,22 @@ namespace Lernperiode_6.player
         public System.Windows.Forms.Timer AttackTimer;
         private Enemy enemy;
         public int[] statsArray;
+        protected Typ playerTyp;
         public static string[] types = { "Archer", "Berserker" };
 
-        
+        public abstract int HealthMax { get; }
+        public abstract int DamageMax { get; }
+        public abstract int AttackSpeedMax { get; }
+        public abstract int DefenseMax { get; }
+        public double HealthCreate
+        {
+            get { return _health; }
+            set
+            {
+                _health = value > HealthMax ? HealthMax : Math.Max(0, value);
+                statsArray[0] = (int)_health;
+            }
+        }
         public double Health
         {
             get { return _health; }
@@ -30,17 +44,49 @@ namespace Lernperiode_6.player
                 Stats.HealthSet = (int)_health;
             }
         }
-      
+        public int Damage
+        {
+            get => _damage;
+            set
+            {
+                _damage = value > DamageMax ? DamageMax : value;
+                statsArray[1] = _damage;
+            }
+            
+        }
+        public int AttackSpeed
+        {
+            get => _attackSpeed;
+            set
+            {
+                _attackSpeed = value > AttackSpeedMax ? AttackSpeedMax : value;
+                statsArray[2] = _attackSpeed;
+            }
+        }
+        public double Defense
+        {
+            get => _defense;
+            set
+            {
+                _defense = value > DefenseMax ? DefenseMax : value;
+                statsArray[3] = (int)_defense;
+            }
+        }
 
         public StatsControl Stats { get; protected set; }
         public StatsEnter EnterStats { get; protected set; }
 
-        protected Typ(int health, int damage, int attackSpeed, int defense)
+        protected Typ(int[] s)
         {
-            _damage = damage;
-            _attackSpeed = attackSpeed;
-            _defense = defense;
-            _health = health;
+            statsArray = s;
+            HealthCreate = s[0];
+            Damage = s[1];
+            AttackSpeed = s[2];
+            Defense = s[3];
+        }
+        public Typ()
+        {
+
         }
 
         public void TakeDamage(int damage)
@@ -64,7 +110,7 @@ namespace Lernperiode_6.player
             if(this.Health <= 0)
             {
                 AttackTimer.Stop();
-                this.Hide();
+                this.Controls.Remove(this);
                 Stats.Hide();
                 return;
             }
@@ -76,6 +122,8 @@ namespace Lernperiode_6.player
             else
             {
                 AttackTimer.Stop();
+                this.Controls.Remove(enemy);
+                this.Controls.Remove(enemy.StatsEnemy);
             }
         }
             

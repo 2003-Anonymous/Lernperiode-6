@@ -46,39 +46,41 @@ namespace Lernperiode_6.player
         private TextBox Damage;
         private TextBox AttackSpeed;
         private TextBox Defense;
-        public int[] s;
+        
 
-        public  StatsEnter()
+        public  StatsEnter(int healthMax, int damageMax, int attackMax, int defenseMax)
         {
-            s = new int[4];
+            
 
             this.Size = new Size(350, 150);
 
             Label lblHealth = new Label { Text = "Health", Location = new Point(5, 15) };
-            Health = new TextBox { Location = new Point(120, 15), Size = new Size(100, 10), PlaceholderText = "0 - 100" };
+            Health = new TextBox { Location = new Point(120, 15), Size = new Size(100, 10), PlaceholderText = $"0 - {healthMax}"};
 
             Label lblDamage = new Label { Text = "Damage", Location = new Point(5, 40) };
-            Damage = new TextBox { Location = new Point(120, 40), Size = new Size(100, 10), PlaceholderText = "0 - 100" };
+            Damage = new TextBox { Location = new Point(120, 40), Size = new Size(100, 10), PlaceholderText = $"0 - {damageMax}" };
 
             Label lblAttackSpeed = new Label { Text = "AttackSpeed", Location = new Point(5, 65) };
-            AttackSpeed = new TextBox { Location = new Point(120, 65), Size = new Size(100, 10), PlaceholderText = "0 - 100" };
+            AttackSpeed = new TextBox { Location = new Point(120, 65), Size = new Size(100, 10), PlaceholderText = $"0 - {attackMax}" };
 
             Label lblDefense = new Label { Text = "Defense", Location = new Point(5, 90) };
-            Defense = new TextBox { Location = new Point(120, 90), Size = new Size(100, 10), PlaceholderText = "0 - 100"};
+            Defense = new TextBox { Location = new Point(120, 90), Size = new Size(100, 10), PlaceholderText = $"0 - {defenseMax}"};
 
             this.Controls.AddRange(new Control[] {lblHealth, Health, lblDamage, Damage, lblAttackSpeed, AttackSpeed, lblDefense, Defense });
 
 
-            s = TextToStats(s);
+            
             
         }
 
-        public int[] TextToStats(int[] s)
+        public int[] TextToStats()
         {
+            int[] s = new int[4];
+
             s[0] = Convert.ToInt32(Health.Text);
             s[1] = Convert.ToInt32(Damage.Text);
             s[2] = Convert.ToInt32(AttackSpeed.Text);
-            s[4] = Convert.ToInt32(Defense.Text);
+            s[3] = Convert.ToInt32(Defense.Text);
 
             return s;
         }

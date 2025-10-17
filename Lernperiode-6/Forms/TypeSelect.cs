@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Text;
@@ -15,6 +16,7 @@ namespace Lernperiode_6
     public partial class TypeSelect : Form
     {
         public Form2 parent;
+        public string typeName;
         public TypeSelect(Form2 parent)
         {
             InitializeComponent();
@@ -48,7 +50,7 @@ namespace Lernperiode_6
         private void TypeButton_Click(object sender, EventArgs e)
         {
             Button clickedButton = sender as Button;
-            string typeName = clickedButton.Tag as string;
+            typeName = clickedButton.Tag as string;
 
             if(typeName == "Archer")
             {
@@ -63,13 +65,14 @@ namespace Lernperiode_6
                 this.Controls.Add(statsPanelAC);
 
                 statsPanelAC.Controls.Add(archerCopy.EnterStats);
-
+                Controls.Add(archerCopy);
+                parent.playerUnit = archerCopy;
                 
             }
             else if(typeName == "Berserker")
             {
                 //Für TypeSelect
-                Berserker berserkerCopy = new Berserker(100, 80, 50, 20);
+                Berserker berserkerCopy = new Berserker();
                 Controls.Add(berserkerCopy);
 
                 FlowLayoutPanel statsPanelBC = new FlowLayoutPanel();
@@ -80,9 +83,23 @@ namespace Lernperiode_6
 
                 statsPanelBC.Controls.Add(berserkerCopy.EnterStats);
                 Controls.Add(berserkerCopy);
+                parent.playerUnit = berserkerCopy;
 
                 //Für Form2
-                Berserker berserker = new Berserker(100, 80, 50, 20);
+               
+
+
+            }
+        }
+        private void commit_btn_Click(object sender, EventArgs e)
+        {
+
+            int[] s = new int[4];
+            s = parent.playerUnit.EnterStats.TextToStats();
+
+            if(typeName == "Berserker")
+            {
+                Berserker berserker = new Berserker(s);
                 Controls.Add(berserker);
                 berserker.Location = new Point(150, 100);
 
@@ -92,32 +109,32 @@ namespace Lernperiode_6
                 statsPanelB.Location = new Point(berserker.Left + 90, berserker.Top);
                 this.parent.Controls.Add(statsPanelB);
 
-                
+
                 statsPanelB.Controls.Add(berserker.Stats);
                 parent.Controls.Add(berserker);
-
                 parent.playerUnit = berserker;
             }
-        }
-        private void commit_btn_Click(object sender, EventArgs e)
-        {
-            //Für Form2
-            Archer archer = new Archer();
-            Controls.Add(archer);
-            archer.Location = new Point(150, 100);
+            else if(typeName == "Archer")
+            {
+                Archer archer = new Archer(s);
+                Controls.Add(archer);
+                archer.Location = new Point(150, 100);
 
-            FlowLayoutPanel statsPanelA = new FlowLayoutPanel();
-            statsPanelA.FlowDirection = FlowDirection.TopDown;
-            statsPanelA.Size = new Size(220, 400);
-            statsPanelA.Location = new Point(archer.Left + 90, archer.Top);
-            this.parent.Controls.Add(statsPanelA);
 
+                FlowLayoutPanel statsPanelA = new FlowLayoutPanel();
+                statsPanelA.FlowDirection = FlowDirection.TopDown;
+                statsPanelA.Size = new Size(220, 400);
+                statsPanelA.Location = new Point(archer.Left + 90, archer.Top);
+                this.parent.Controls.Add(statsPanelA);
+
+
+
+                statsPanelA.Controls.Add(archer.Stats);
+                parent.Controls.Add(archer);
+
+                parent.playerUnit = archer;
+            }
             
-
-            statsPanelA.Controls.Add(archer.Stats);
-            parent.Controls.Add(archer);
-
-            parent.playerUnit = archer;
 
             this.Close();
         }
